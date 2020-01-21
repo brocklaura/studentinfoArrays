@@ -1,0 +1,46 @@
+﻿using System;
+
+namespace Lab2._1RoomCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            while (true)
+            {
+                Console.WriteLine("Let's figure out the area and perimeter of the GC Classrooms");
+
+                Console.Write("Please enter the classroom's length: ");
+                string inputL = Console.ReadLine();
+                double length = double.Parse(inputL);
+
+
+                Console.Write("Please enter the classroom's width: ");
+                string inputW = Console.ReadLine();
+                double width = double.Parse(inputW);
+
+                double area = length * width;
+                double perimeter = length + length + width + width;
+
+                Console.WriteLine("The area of this room is " + area + "ft and the perimeter is " + perimeter + "ft.");
+
+                if (area < 250)
+                {
+                    Console.WriteLine("This is a small size classroom");
+                }
+                else if (area <= 650)
+                {
+                    Console.WriteLine("This is a medium size classroom");
+                }
+                else if (area > 650)
+                {
+                    Console.WriteLine("This is a large size classroom");
+                }
+
+             }
+            
+            Console.WriteLine();
+        }
+    }
+}
